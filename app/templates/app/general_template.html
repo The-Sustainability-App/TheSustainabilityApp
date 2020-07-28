@@ -49,17 +49,17 @@
 <body id='theme'>
 
     <div class="navBar">
-        <li class="link"><a href="index.html">Home</a></li>
+        <li class="link"><a href="{% url 'home' %}">Home</a></li>
         <li class="divider">|</li>
-        <li class="link"><a href="about.html">About Us</a></li>
+        <li class="link"><a href="{% url 'about' %}">About Us</a></li>
         <li class="divider">|</li>
-        <li class="link"><a href="app.html">Our App</a></li>
+        <li class="link"><a href="{% url 'app' %}">Our App</a></li>
         <li class="divider">|</li>
         <li class="link"><a href="#contact">Contact Us</a></li>
     </div>
 
     <div class="imageContainer">
-        <img src="{% static 'ricky_test_pic.jpeg' %}" alt="Sky image" style="width:100%; overflow: hidden;">
+        <img src="{% static 'images/ricky_test_pic.jpeg' %}" alt="Sky image" style="width:100%; overflow: hidden;">
         <div class="titleOnImage">
             <p>
                 {{ title }}

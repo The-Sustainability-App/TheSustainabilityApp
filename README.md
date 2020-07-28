@@ -12,4 +12,3 @@ Ricky
 
 ## Dependencies
 * Django (pip install Django)
-* django-allauth (pip install django-allauth)

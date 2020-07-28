@@ -1,5 +1,5 @@
 {% extends 'app/general_template.html' %}
-
+{% load static %}
 {% block content %}
 <section>
     <div>
@@ -31,11 +31,11 @@
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
-            <img src="{% static 'ricky_test_pic.jpeg' %} style="width: 100%">
+            <img src="{% static 'images/ricky_test_pic.jpeg' %}" style="width: 100%">
             <div class="text">Caption 1</div>
         </div>
         <div class="mySlides fade">
-            <img src="{% static 'ricky_test_pic.jpeg' %} style="width: 100%">
+            <img src="{% static 'images/ricky_test_pic.jpeg' %}" style="width: 100%">
             <div class="text">Caption 2</div>
         </div>
         <!-- Next and previous buttons -->
@@ -53,14 +53,14 @@
                 <div class="timeline-content">
                     <h2 class="timeline-text">2017</h2>
                     <p class="timeline-text">Lorem ipsum..</p>
-                    <img src="{% static 'ricky_test_pic.jpeg' %} class="timeline-image">
+                    <img src="{% static 'ricky_test_pic.jpeg' %}" class="timeline-image">
                 </div>
             </div>
             <div class="container right">
                 <div class="timeline-content">
                     <h2 class="timeline-text">2016</h2>
                     <p class="timeline-text">Lorem ipsum..</p>
-                    <img src="{% static 'ricky_test_pic.jpeg' %} class="timeline-image">
+                    <img src="{% static 'ricky_test_pic.jpeg' %}" class="timeline-image">
                 </div>
             </div>
         </div>

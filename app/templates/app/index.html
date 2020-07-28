@@ -1,7 +1,7 @@
-{% extends 'home/general_template.html' %}
-
+{% extends 'app/general_template.html' %}
+{% load static %}
 {% block content %}
 
-<img src="ricky_test_pic.jpeg" alt="Sky image" style="width:100%; overflow: hidden;">
+<img src="{% static 'images/ricky_test_pic.jpeg' %}" alt="Sky image" style="width:100%; overflow: hidden;">
 
 {% endblock %}
