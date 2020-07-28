@@ -1,115 +1,34 @@
-<html>
+{% extends 'app/general_template.html' %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      // Add smooth scrolling to all links
-      $("a").on('click', function(event) {
-    
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-    
-          // Store hash
-          var hash = this.hash;
-    
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-    
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    });
-    </script> 
-
-    <meta 
-     name='viewport' 
-     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
-    />
-
-    <head>
-        <title>PAGE TITLE - The Sustainability App</title>
-        <link rel="stylesheet" href="styling.css">
-    </head>
-
-    <body id='theme'>
-
-        <div class="navBar">
-            <li class="link"><a href="index.html">Home</a></li>
-            <li class="divider">|</li>
-            <li class="link"><a href="about.html">About Us</a></li>
-            <li class="divider">|</li>
-            <li class="link"><a href="app.html">Our App</a></li>  
-            <li class="divider">|</li>
-            <li class="link"><a href="#contact">Contact Us</a></li>
-        </div>
-
-        <div class="imageContainer">
-            <img src="ricky_test_pic.jpeg" alt="Sky image" style="width:100%; overflow: hidden;">
-            <div class="titleOnImage">
-              <p>
-                  About Us
-              </p>
-              <a href = "#scrollto" style="font-size: 35;">
-                See more
-              </a>
-            </div> 
-        </div>
-
-        
-
-        <div id="scrollto">
-            
-          <div class="grid-container">
-              <div class= "header"> We are a group of students from the University of Cambridge.<br />
-                We work with several organizations as listed below. .....</div>
-              <div class="grid-item-pic">
-                <img src="cued_logo.png" class="grid-item--1" alt="cued logo">  
-              </div>
-              <div class="grid-item">
-                <h3><a href="https://www.cam.ac.uk/">University of Cambridge</a></h3>
-                <p>We are working with the Department of Engineering... 
-                </p></div>
-              <div class="grid-item-pic">
-                <img src="ulg_logo.png" class="grid-item--1" alt="Zero Carbon logo"></div>
-              <div class="grid-item">
-                <h3><a href="https://www.uselessgroup.org/">Use Less Group</a></h3>
-                <p>We are working with the Use Less Group</p></div>
-              <div class="grid-item-pic">
-                <img src="game_carbon.jpg" class="grid-item--1" alt = "Gamifying Decarbonisation logo" >
-              </div>
-              <div class="grid-item">
-                <h3><a href="https://www.environment.admin.cam.ac.uk/news/gamifying-decarbonisation-are-you-challenge">Gamifying Decarbonisation</a></h3>
-                <p>We are participating in ...</p>
-              </div>
-              <div class="grid-item-pic">
-                <img src="itic_logo.png" class="grid-item--1" ></div>
-              <div class="grid-item">
-                <h3><a href="https://cambridge.iticam.org/">Impact Through Innovation Cambridge ITIC</a></h3>
-                <p>We are participating in...</p></div>
-          </div>            
-
-        </div>
-
-        <div class= "contact" id = "contact">
-
-          <footer>
-            <p>Brought to you by the Sustainability App team</p>
-            <p>Core team contact information:</p><br>
-            Strategy Lead: <a href="mailto:ou217@cam.ac.uk">Tse Uweja</a><br>
-            Technical Lead: <a href="mailto:pr450@cam.ac.uk">Puria Radmard</a><br>
-            Branding and Design: <a href="mailto:cgs43@cam.ac.uk">Chiara Shaw</a><br>
-            Behavioural Insights: <a href="mailto:ts749@cam.ac.uk">Abi Sakthivel</a><br>
-          </footer>
-
-        </div>
-
-    </body>
-
-</html>
+{% block content %}
+<div class="grid-container">
+    <div class="header"> We are a group of students from the University of Cambridge.<br /> We work with several organizations as listed below. .....</div>
+    <div class="grid-item-pic">
+        <img src="cued_logo.png" class="grid-item--1" alt="cued logo">
+    </div>
+    <div class="grid-item">
+        <h3><a href="https://www.cam.ac.uk/">University of Cambridge</a></h3>
+        <p>We are working with the Department of Engineering...
+        </p>
+    </div>
+    <div class="grid-item-pic">
+        <img src="ulg_logo.png" class="grid-item--1" alt="Zero Carbon logo"></div>
+    <div class="grid-item">
+        <h3><a href="https://www.uselessgroup.org/">Use Less Group</a></h3>
+        <p>We are working with the Use Less Group</p>
+    </div>
+    <div class="grid-item-pic">
+        <img src="game_carbon.jpg" class="grid-item--1" alt="Gamifying Decarbonisation logo">
+    </div>
+    <div class="grid-item">
+        <h3><a href="https://www.environment.admin.cam.ac.uk/news/gamifying-decarbonisation-are-you-challenge">Gamifying Decarbonisation</a></h3>
+        <p>We are participating in ...</p>
+    </div>
+    <div class="grid-item-pic">
+        <img src="itic_logo.png" class="grid-item--1"></div>
+    <div class="grid-item">
+        <h3><a href="https://cambridge.iticam.org/">Impact Through Innovation Cambridge ITIC</a></h3>
+        <p>We are participating in...</p>
+    </div>
+</div>
+{% endblock %}
